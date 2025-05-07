@@ -12,20 +12,20 @@ def calculate_area(base, height):
 
 
 def main():
-    base_string = input("Enter the base of a rectangle: ")
+    base_string = input("Enter the base of a triangle: ")
     try:
-        base_integer = int(base_string)
-        height_string = input("Enter the height of a rectangle: ")
+        base_integer = float(base_string)
+        height_string = input("Enter the height of a triangle: ")
         try:
-            height_integer = int(height_string)
-            if height_integer and base_integer < 0:
-                print("The number should we greater than 0")
+            height_integer = float(height_string)
+            if height_integer < 0 or base_integer < 0:
+                print("The number should be greater than 0")
             else:
                 calculate_area(base_integer, height_integer)
         except Exception:
             print("{} is not valid input".format(height_string))
     except Exception:
-        print("{} is not valid inout".format(base_string))
+        print("{} is not valid input".format(base_string))
 
 
 if __name__ == "__main__":
