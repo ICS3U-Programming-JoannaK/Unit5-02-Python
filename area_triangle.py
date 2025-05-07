@@ -18,7 +18,10 @@ def main():
         height_string = input("Enter the height of a rectangle: ")
         try:
             height_integer = int(height_string)
-            calculate_area(base_integer, height_integer)
+            if height_integer and base_integer < 0:
+                print("The number should we greater than 0")
+            else:
+                calculate_area(base_integer, height_integer)
         except Exception:
             print("{} is not valid input".format(height_string))
     except Exception:
