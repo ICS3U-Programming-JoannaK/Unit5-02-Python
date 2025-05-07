@@ -6,29 +6,23 @@
 # calculates the area of a triangle
 
 
-def calculate_area(length, width):
-    area = length * width
+def calculate_area(base, height):
+    area = 1 / 2 * base * height
     print("The area is {} cm^2".format(area))
 
 
-def calculate_perimeter(length, width):
-    perimeter = 2 * (length + width)
-    print("The perimeter is {}cm".format(perimeter))
-
-
 def main():
-    length_string = input("Enter the length of a rectangle: ")
+    base_string = input("Enter the base of a rectangle: ")
     try:
-        length_integer = int(length_string)
-        width_string = input("Enter the width of a rectangle: ")
+        base_integer = int(base_string)
+        height_string = input("Enter the height of a rectangle: ")
         try:
-            width_integer = int(width_string)
-            calculate_area(length_integer, width_integer)
-            calculate_perimeter(length_integer, width_integer)
+            height_integer = int(height_string)
+            calculate_area(base_integer, height_integer)
         except Exception:
-            print("{} is not valid input".format(width_string))
+            print("{} is not valid input".format(height_string))
     except Exception:
-        print("{} is not valid inout".format(length_string))
+        print("{} is not valid inout".format(base_string))
 
 
 if __name__ == "__main__":
